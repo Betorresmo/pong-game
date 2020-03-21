@@ -1,4 +1,4 @@
-import {player, style} from './main.js';
+import {player, score, style} from './main.js';
 import {oponent} from './oponent.js';
 export {ballMovement, ball};
 
@@ -23,8 +23,13 @@ function drawBall(x, y, radius){
 
 function ballColision(){
 
-    if(ball.xPosition - ball.radius < 0 || ball.xPosition + ball.radius > canvas.width){
+    if(ball.xPosition - ball.radius < 0){
         ball.xSpeed *= -1;
+        score.oponent.textContent = parseInt(score.oponent.textContent) + 1;
+    }
+    if (ball.xPosition + ball.radius > canvas.width){
+        ball.xSpeed *= -1;
+        score.player.textContent = parseInt(score.player.textContent) + 1;
     }
     if(ball.yPosition - ball.radius < 0 || ball.yPosition + ball.radius > canvas.height){
         ball.ySpeed *= -1;

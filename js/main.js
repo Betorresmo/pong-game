@@ -1,4 +1,4 @@
-export {player, style};
+export {player, score, style};
 import {ballMovement} from './ball.js';
 import {drawPlayer} from './player.js';
 import {drawOponent} from './oponent.js';
@@ -6,22 +6,26 @@ import {drawOponent} from './oponent.js';
 const canvas = document.querySelector("#pong");
 const context = canvas.getContext('2d');
 
-const style = {
-    ballColor: '#ffffc1',
-    playersColor: '#ffffc1',
-    fieldLine: '#d38cad'
-};
 const player = {
     width: 15,
     height: 70,
     xPosition: 10,
     yPosition: 100
 };
+const score = {
+    player: document.querySelector('#scorePlayer'),
+    oponent: document.querySelector('#scoreOponent')
+};
+const style = {
+    ballColor: '#ffffc1',
+    playersColor: '#ffffc1',
+    fieldLine: '#d38cad'
+};
 
 function drawFieldLine(){
     context.fillStyle = style.fieldLine;
     context.fillRect (canvas.width/2 - 7.5, 0, 15, canvas.height);
-}
+};
 
 setInterval(()=>{
 
