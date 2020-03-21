@@ -13,10 +13,10 @@ const oponent = {
 
 function oponentMovement(){
 
-    if(ball.yPosition < oponent.yPosition - 15){
-        oponent.yPosition -= 3.5;
-    } else if(ball.yPosition > oponent.yPosition + 15){
-        oponent.yPosition += 3.5;
+    if(ball.yPosition < oponent.yPosition - 10){
+        oponent.yPosition -= 2.4;
+    } else if(ball.yPosition > oponent.yPosition + 10){
+        oponent.yPosition += 2.4;
     }
 }
 

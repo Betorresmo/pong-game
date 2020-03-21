@@ -1,3 +1,60 @@
-canvas {
-  background-color: #1a4369;
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100vw;
+  padding: 5rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container__scoreboard {
+  border: solid 15px #d38cad;
+  background-color: #8a79af;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: none;
+  height: 4rem;
+  width: 10rem;
+}
+
+.container__scoreboard span {
+  color: #ffffc1;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container__canvas {
+  border: solid 15px #d38cad;
+  background-color: #8a79af;
 }

@@ -1,4 +1,4 @@
-import {player} from './main.js';
+import {player, style} from './main.js';
 import {oponent} from './oponent.js';
 export {ballMovement, ball};
 
@@ -9,15 +9,15 @@ const ball = {
     radius: 15,
     xPosition: canvas.width/2,
     yPosition: canvas.height/2,
-    xSpeed: -4,
-    ySpeed: -4
+    xSpeed: -2.5,
+    ySpeed: -2.5
 }
 
-function drawBall(x, y){
+function drawBall(x, y, radius){
 
-    context.fillStyle = "#FFFFFF";
+    context.fillStyle = style.ballColor;
     context.beginPath();
-    context.arc(x, y, 15, 0, 2 * Math.PI);
+    context.arc(x, y, radius, 0, 2 * Math.PI);
     context.fill();
 }
 
@@ -41,7 +41,7 @@ function ballMovement(){
     
     ball.xPosition += ball.xSpeed;
     ball.yPosition += ball.ySpeed;
-    drawBall(ball.xPosition, ball.yPosition);
+    drawBall(ball.xPosition, ball.yPosition, ball.radius);
     ballColision();
 
 }

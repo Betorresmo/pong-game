@@ -3,12 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Pong</title>
 </head>
 <body>
     <div class="container">
-        <canvas id='pong' width="800" height="500"></canvas>
+        <div class="container__scoreboard">
+            <span id="score1">1</span>
+            <span id="score2">2</span>
+        </div>
+        <canvas class="container__canvas" id='pong' width="800" height="500"></canvas>
     </div>
     <script type="module" src="./js/main.js"></script>
 </body>

@@ -1,3 +1,45 @@
-canvas{
-    background-color: #1a4369;
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+$fieldColor: #8a79af;
+$fieldBorders: #d38cad;
+$scorePlayers: #ffffc1;
+
+@mixin boxStyle{
+    border: solid 15px $fieldBorders;
+    background-color: $fieldColor;
+}
+@mixin flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    @include flexCenter;
+    width: 100vw;
+    padding: 5rem;
+    box-sizing: border-box;
+    flex-direction: column;
+
+    &__scoreboard{
+        @include boxStyle;
+        @include flexCenter;
+        border-bottom: none;
+        height: 4rem;
+        width: 10rem;
+
+        span{
+            color: $scorePlayers;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 1.5rem;
+            text-align: center;
+            width: 50%;
+            height: 100%;
+            @include flexCenter;
+
+        }
+    }
+    &__canvas{
+        @include boxStyle;
+    }
 }
